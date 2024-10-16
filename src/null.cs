@@ -1,16 +1,28 @@
-//Ways to guard against null arguments
+// Ways to guard against null arguments
 
 
-//1
+// 1a
 if (args is null){
     throw new ArgumentNullException(nameof(args));
 }
 
-
-//2
+// 1b
 ArgumentNullException.ThrowIfNull(args);
 
-
-//3
+// 1c
 value = arg ??
-    throw new ArgumentNullException(nameof(arg))
+    throw new ArgumentNullException(nameof(arg));
+
+
+
+// 2a
+if (customer is not null &&
+    customer.Orders is not null)
+    {
+        customer.Orders.Ship();
+    }
+
+
+// 2b 
+customer?.Orders?.Ship();
+
