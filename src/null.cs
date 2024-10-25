@@ -1,6 +1,5 @@
 // Ways to guard against null arguments
 
-
 // 1a
 if (args is null){
     throw new ArgumentNullException(nameof(args));
@@ -14,7 +13,7 @@ value = arg ??
     throw new ArgumentNullException(nameof(arg));
 
 
-
+// Conditional expression
 // 2a
 if (customer is not null &&
     customer.Orders is not null)

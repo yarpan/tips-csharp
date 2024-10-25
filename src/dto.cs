@@ -14,8 +14,7 @@ public record Product(
     int StockQuantity);
 
 
-
 // Choose 𝗿𝗲𝗰𝗼𝗿𝗱𝘀 when:
 // - You need immutable data types.
 // - You want built-in value equality.
-// - You’re creating simple DTOs without behavior.
+// - You’re creating simple DTO without behavior
