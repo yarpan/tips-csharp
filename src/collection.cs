@@ -25,3 +25,13 @@ var categoryCounts = products
 // .NET 9
 var categoryCounts = products
     .CountBy(p => p.Category);
+
+
+//MinBy and MaxBy
+// .NET 5
+var cheapest = cars.OrderBy(categoryCounts => categoryCounts.Price).First();
+var priciest = cars.OrderByDescending(c => c.Price).First();
+
+// .NET 6
+var cheapest - cars.MinBy(c=>c.Price);
+var priciest - cars.MaxBy(c=>c.Price);
